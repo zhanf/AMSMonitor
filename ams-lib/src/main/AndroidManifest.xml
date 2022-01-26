@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shyii.ams_lib">
+
+    <application>
+        <provider
+            android:name=".AMSContentProvider"
+            android:authorities="com.shyii.ams.AMSContentProvider"
+            android:enabled="@bool/asm_monitor_auto_install"
+            android:exported="false" />
+    </application>
+</manifest>
