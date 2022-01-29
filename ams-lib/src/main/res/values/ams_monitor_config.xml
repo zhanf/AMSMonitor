@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自动注册 AMSMonitor-->
+    <bool name="ams_monitor_auto_install">true</bool>
+
+    <!--Bundle 大小阈值调节，范围 [0,100]-->
+    <integer name="bundle_size_threshold_percent">80</integer>
+</resources>

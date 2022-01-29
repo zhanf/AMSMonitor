@@ -6,7 +6,7 @@
         <provider
             android:name=".AMSContentProvider"
             android:authorities="com.shyii.ams.AMSContentProvider"
-            android:enabled="@bool/asm_monitor_auto_install"
+            android:enabled="@bool/ams_monitor_auto_install"
             android:exported="false" />
     </application>
 </manifest>
