@@ -30,18 +30,17 @@ object AMSMonitor {
 
     private fun hookStartActivity() {
         Reflection()
-        ActivityManagerServiceHook.block =
-            { _: Any, method: Method, args: Array<Any>? ->
-                if (method.name == "startActivity" && args != null && args.isNotEmpty()) {
-                    for (index in args.indices) {
-                        if (args[index] is Intent) {
-                            val size = (args[index] as Intent).extras?.sizeAsParcel() ?: 0
-                            Log.e(TAG, "startActivity >> bundle.sizeAsParcel:$size")
-                            break
-                        }
+        ActivityManagerServiceHook.registerInvokeCallback { _: Any, method: Method, args: Array<Any>? ->
+            if (method.name == "startActivity" && args != null && args.isNotEmpty()) {
+                for (index in args.indices) {
+                    if (args[index] is Intent) {
+                        val size = (args[index] as Intent).extras?.sizeAsParcel() ?: 0
+                        Log.e(TAG, "startActivity >> bundle.sizeAsParcel:$size")
+                        break
                     }
                 }
             }
+        }
         ActivityManagerServiceHook.hookAMS()
     }
 
