@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onSaveInstanceState(outState: Bundle) {
-        outState.putByteArray("byteArray",ByteArray(50 * 1024))
+        outState.putByteArray("byteArray",ByteArray(500 * 1024))
         super.onSaveInstanceState(outState)
     }
 }

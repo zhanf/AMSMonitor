@@ -4,9 +4,8 @@ import android.os.Build
 import com.shyii.ams_core.amshook.ActivityManagerHooker
 import com.shyii.ams_core.amshook.ActivityManagerNativeHooker
 import com.shyii.ams_core.amshook.IActivityTaskManagerHooker
-import java.lang.reflect.InvocationHandler
-import java.lang.reflect.InvocationTargetException
-import java.lang.reflect.Method
+import java.lang.reflect.*
+import java.util.*
 
 /**
  * @Author zhanfeng
